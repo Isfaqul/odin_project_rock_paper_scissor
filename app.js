@@ -78,9 +78,13 @@ function game() {
   }
 
   if (playerScore > computerScore) {
-    alert("You Win the Game with a score of " + playerScore);
+    alert(
+      `You win the Game. Final Scores\n\tComputer: ${computerScore}\n\tYourScore: ${playerScore} `
+    );
   } else {
-    alert("You lose the Game with a score of " + computerScore);
+    alert(
+      `You lose the Game. Final Scores\n\tComputer: ${computerScore}\n\tYourScore: ${playerScore} `
+    );
   }
 }
 
