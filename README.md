@@ -6,5 +6,5 @@
 
 ## Features to include
 
-- Display Pop Up for the winner or lose once game is over
-- Add sound on click of weapons
+- Display Pop Up to announce win or lose
+- Add sound effects
