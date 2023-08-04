@@ -4,7 +4,61 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="app.js" defer></script>
+    <link rel="stylesheet" href="style.css" />
     <title>Rock Paper Scissor</title>
   </head>
-  <body></body>
+  <body>
+    <main>
+      <!-- Heading -->
+      <h1 id="title">Rock-Paper-Scissor</h1>
+      <p class="sub-title">first to 5 wins !!</p>
+      <!-- Main Section -->
+      <section class="main-container">
+        <!-- Top Half of the Game UI -->
+        <div class="top-half">
+          <div class="player-score-container">
+            <h2 class="player-score">0</h2>
+          </div>
+          <div class="weapon-main-display-wrapper">
+            <div class="weapon-display-container">
+              <p class="player-name">Player</p>
+              <div class="chosen-weapon"></div>
+            </div>
+            <div class="vs-container">
+              <h2 class="vs">VS</h2>
+            </div>
+            <div class="weapon-display-container">
+              <p class="player-name">Computer</p>
+              <div class="chosen-weapone"></div>
+            </div>
+          </div>
+          <div class="computer-score-container">
+            <h2 class="computer-score">0</h2>
+          </div>
+        </div>
+
+        <!-- Bottom Half of the Game UI -->
+        <p class="weapon-choice-text">Choose your weapon</p>
+        <div class="weapons-container">
+          <div class="weapon-item">
+            <h3>🪨</h3>
+            <p class="weapon-name">Rock</p>
+          </div>
+          <div class="weapon-item">
+            <h3>📄</h3>
+            <p class="weapon-name">Paper</p>
+          </div>
+          <div class="weapon-item">
+            <h3>✂</h3>
+            <p class="weapon-name">Scissor</p>
+          </div>
+        </div>
+
+        <!-- Bottom Half of the Game UI -->
+        <div class="message-box">
+          <p class="game-message">You Lose the round! Rock beats Scissors.</p>
+        </div>
+      </section>
+    </main>
+  </body>
 </html>

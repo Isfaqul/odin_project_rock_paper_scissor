@@ -1,0 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Chango&family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --bg-one: #f05f57;
+  --bg-two: #360940;
+  --golden-txt: #ffc700;
+  --white: #fff;
+  --blue-txt: #00bce5;
+  --msg-box-bg: #461042;
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
