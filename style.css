@@ -7,6 +7,7 @@
   --white: #fff;
   --blue-txt: #00bce5;
   --msg-box-bg: #461042;
+  --vs-txt: #ff8a00;
 }
 
 *,
@@ -15,4 +16,158 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+}
+
+html {
+  font-family: "Montserrat", sans-serif;
+  font-size: 62.5%;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(138deg, #f05f57 0%, #360940 100%) no-repeat;
+}
+
+main {
+  padding: 5rem;
+}
+
+/* Heading */
+
+#title {
+  font-family: "Chango", cursive;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  text-align: center;
+  font-size: 5rem;
+  color: var(--golden-txt);
+}
+
+.sub-title {
+  color: var(--white);
+  text-shadow: 0px 3px 3px rgba(0, 0, 0, 0.25);
+  text-transform: uppercase;
+  font-size: 2.5rem;
+  text-align: center;
+  letter-spacing: 0.4rem;
+  font-weight: 600;
+  opacity: 0.9;
+  margin-bottom: 6.9rem;
+}
+
+/* Top Half of the UI */
+
+.main-container {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 1em;
+  border: 0.3em solid rgba(255, 199, 0, 0.2);
+  padding: 5em;
+  max-width: 90rem;
+  margin-inline: auto;
+  min-width: 68rem;
+}
+
+.top-half {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+}
+
+.score {
+  font-size: 8rem;
+  font-weight: 900;
+  color: var(--golden-txt);
+  font-style: italic;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.weapon-main-display-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 1.7em;
+  margin-inline: 7rem;
+}
+
+.vs {
+  font-size: 4rem;
+  color: var(--vs-txt);
+  font-weight: 900;
+  font-style: italic;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 1px 1px 0px #f00;
+}
+
+.chosen-weapon {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 0.5em;
+  width: 16rem;
+  height: 16rem;
+}
+
+.player-name {
+  font-size: 2rem;
+  text-transform: uppercase;
+  color: var(--golden-txt);
+  font-weight: 700;
+  font-style: italic;
+  text-align: center;
+  margin-bottom: 0.4rem;
+  text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.4);
+}
+
+/* Middle Half of the UI */
+
+.weapon-choice-text {
+  font-size: 2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--white);
+  opacity: 0.85;
+  text-align: center;
+  margin: 5rem 0;
+  text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.4);
+}
+
+.weapons-container {
+  display: flex;
+  justify-content: center;
+  gap: 7em;
+}
+
+.weapon-item h3 {
+  font-size: 6.5rem;
+  text-align: center;
+  background-color: var(--golden-txt);
+  width: 10rem;
+  height: 10rem;
+  border-radius: 0.5rem;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  /* text-shadow: 0px 1px 7px rgba(0, 0, 0, 0.2); */
+  cursor: pointer;
+}
+
+.weapon-name {
+  color: rgba(255, 199, 0, 0.7);
+  margin-top: 0.5em;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+/* Bottom Half of the UI */
+
+.message-box {
+  padding: 1rem;
+  margin-top: 3rem;
+  margin-inline: auto;
+  width: 60%;
+  border-radius: 0.5rem;
+  background: var(--msg-box-bg);
+}
+
+.game-message {
+  color: var(--blue-txt);
+  text-align: center;
+  font-size: 2rem;
+  font-style: italic;
+  font-weight: 700;
 }
