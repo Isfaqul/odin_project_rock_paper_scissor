@@ -40,6 +40,7 @@ main {
   text-align: center;
   font-size: 5rem;
   color: var(--golden-txt);
+  user-select: none;
 }
 
 .sub-title {
@@ -52,6 +53,7 @@ main {
   font-weight: 600;
   opacity: 0.9;
   margin-bottom: 6.9rem;
+  user-select: none;
 }
 
 /* Top Half of the UI */
@@ -74,6 +76,7 @@ main {
 }
 
 .score {
+  user-select: none;
   font-size: 8rem;
   font-weight: 900;
   color: var(--golden-txt);
@@ -89,6 +92,7 @@ main {
 }
 
 .vs {
+  user-select: none;
   font-size: 4rem;
   color: var(--vs-txt);
   font-weight: 900;
@@ -98,12 +102,16 @@ main {
 
 .chosen-weapon {
   background-color: rgba(255, 255, 255, 0.2);
-  border-radius: 0.5em;
+  border-radius: 0.5rem;
   width: 16rem;
   height: 16rem;
+  font-size: 10rem;
+  text-align: center;
+  text-shadow: 0px 10px 25px rgba(0, 0, 0, 0.2);
 }
 
 .player-name {
+  user-select: none;
   font-size: 2rem;
   text-transform: uppercase;
   color: var(--golden-txt);
@@ -117,6 +125,7 @@ main {
 /* Middle Half of the UI */
 
 .weapon-choice-text {
+  user-select: none;
   font-size: 2rem;
   font-weight: 600;
   text-transform: uppercase;
@@ -143,14 +152,30 @@ main {
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
   /* text-shadow: 0px 1px 7px rgba(0, 0, 0, 0.2); */
   cursor: pointer;
+  transition: transform 0.1s ease-in-out;
+  transition: background-color 0.1s ease-in-out;
+  user-select: none;
+}
+
+.weapon-item h3:hover {
+  background-color: #fed12e;
+  transform: scale(1.01);
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.25);
+}
+
+.weapon-item h3:active {
+  background-color: #eab804;
+  transform: scale(1);
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25);
 }
 
 .weapon-name {
-  color: rgba(255, 199, 0, 0.7);
+  user-select: none;
+  color: rgba(255, 199, 0, 0.6);
   margin-top: 0.5em;
   text-align: center;
   font-size: 1.5rem;
-  font-weight: 400;
+  font-weight: 500;
 }
 
 /* Bottom Half of the UI */
