@@ -105,9 +105,13 @@ function handleGame() {
   // Check if game to be stopped
   if (playerScore === 5 || computerScore === 5) {
     if (playerScore === 5) {
-      declareGameOutcome("player");
+      setTimeout(() => {
+        declareGameOutcome("player");
+      }, 500);
     } else {
-      declareGameOutcome("computer");
+      setTimeout(() => {
+        declareGameOutcome("computer");
+      }, 1000);
     }
 
     resetGame();
@@ -174,18 +178,18 @@ function displayGameOverEmoji(winnerName) {
 // show Game Over Text
 function displayGameOverTxt(winnerName) {
   const gameOverWinTxt = [
-    "Wuhoo!You Won The Game!",
-    "Abe Jiki Gola be Kela",
-    "Jikili, Mojaaaaaaaaaaaaaaa be!",
-    "Abe luckot jiki goli, hatt!",
-    "Tumi e main! Jiki Gola",
+    "Wuhoo! You Won The Game!",
+    "You Won! That was cool.",
+    "Much deserved win!!",
+    "You did it, you won!",
+    "Way to go! You Win!",
   ];
   const gameOverLoseTxt = [
-    "Hahaha! Ki mokkel be!! Hari goli",
-    "Toi Gedaa, janisilu e! Hari goiso",
-    "Tur Kopal Futa, LOL! Hariso",
-    "Goru hara disa!, etia hagi aha tumi",
-    "Hari gola, tumi number one under 18 Geda",
+    "Ooops! You lost the Game.",
+    "You lost the game!",
+    "Better luck next time! You lost",
+    "Damn, you lost just by a little!",
+    "You almost won, better luck next time!",
   ];
 
   const txtEl = document.querySelector(".game-over-txt");
