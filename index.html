@@ -8,6 +8,11 @@
     <title>Rock Paper Scissor</title>
   </head>
   <body>
+    <div>
+      <audio id="winner-sound" src="assets/win.mp3"></audio>
+      <audio id="loser-sound" src="assets/lose.wav"></audio>
+      <audio id="click-sound" src="assets/click.mp3"></audio>
+    </div>
     <main>
       <!-- Heading -->
       <h1 id="title">Rock-Paper-Scissor</h1>
@@ -64,6 +69,7 @@
       <div class="game-out-come" data-outcome-element>
         <h2 class="game-over-emoji"></h2>
         <h3 class="game-over-txt">আবে !! জিকি গলা দেখুন !</h3>
+        <p data-msg-display></p>
         <button type="button" class="play-again-btn">Play Again</button>
       </div>
     </main>

@@ -84,6 +84,7 @@ function updateChoiceDisplay(computerChoice, playerChoice) {
 
 // Handle The Game
 function handleGame() {
+  playClick();
   const playerChoice = this.innerText;
   const computerChoice = getComputerChoice();
   let roundResult = playRound(playerChoice, computerChoice);
@@ -129,6 +130,30 @@ function declareGameOutcome(winnerName) {
   displayGameOverTxt(winnerName);
 
   popUpEl.classList.add("show");
+
+  if (winnerName === "player") {
+    playWinSound();
+  } else {
+    playLoseSound();
+  }
+}
+
+function playLoseSound() {
+  const loserSound = document.getElementById("loser-sound");
+  loserSound.currentTime = 0;
+  loserSound.play();
+}
+
+function playWinSound() {
+  const winSound = document.getElementById("winner-sound");
+  winSound.currentTime = 0;
+  winSound.play();
+}
+
+function playClick() {
+  const clickSound = document.getElementById("click-sound");
+  clickSound.currentTime = 0;
+  clickSound.play();
 }
 
 // show Game Over Emoji
@@ -151,16 +176,16 @@ function displayGameOverTxt(winnerName) {
   const gameOverWinTxt = [
     "Wuhoo!You Won The Game!",
     "Abe Jiki Gola be Kela",
-    "Mojaaaaaaaaaaaaaaa bbe!",
-    "Abe luckot jiki goli, hattt!",
-    "Tumi e main!",
+    "Jikili, Mojaaaaaaaaaaaaaaa be!",
+    "Abe luckot jiki goli, hatt!",
+    "Tumi e main! Jiki Goli",
   ];
   const gameOverLoseTxt = [
-    "Hahaha! Ki mokkell be!!",
-    "Toi Gedaa, janisilu e!",
-    "Tur Kopal Futa, LOL",
-    "Jua etia hagi aha tumi",
-    "Tumi number one under 18 Geda",
+    "Hahaha! Ki mokkel be!! Hari goli",
+    "Toi Gedaa, janisilu e! Hari goiso",
+    "Tur Kopal Futa, LOL! Hariso",
+    "Goru hara disa!, etia hagi aha tumi",
+    "Hari gola, tumi number one under 18 Geda",
   ];
 
   const txtEl = document.querySelector(".game-over-txt");
