@@ -178,7 +178,7 @@ function displayGameOverTxt(winnerName) {
     "Abe Jiki Gola be Kela",
     "Jikili, Mojaaaaaaaaaaaaaaa be!",
     "Abe luckot jiki goli, hatt!",
-    "Tumi e main! Jiki Goli",
+    "Tumi e main! Jiki Gola",
   ];
   const gameOverLoseTxt = [
     "Hahaha! Ki mokkel be!! Hari goli",
