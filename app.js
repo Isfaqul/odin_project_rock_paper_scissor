@@ -59,6 +59,7 @@ function playRound(playerSelection, computerSelection) {
   return winner;
 }
 
+// Update the score
 function updateScoreDisplay() {
   const playerScoreEl = document.querySelector("h2[data-player-score]");
   const computerScoreEl = document.querySelector("h2[data-computer-score]");
@@ -67,6 +68,7 @@ function updateScoreDisplay() {
   computerScoreEl.innerText = computerScore;
 }
 
+// Display the chosen weapons
 function updateChoiceDisplay(computerChoice, playerChoice) {
   const computerWeaponDisplay = document.querySelector(
     "h3[data-weapon-display-computer]"
@@ -80,6 +82,7 @@ function updateChoiceDisplay(computerChoice, playerChoice) {
   playerWeaponDisplay.innerText = playerChoice;
 }
 
+// Handle The Game
 function handleGame() {
   const playerChoice = this.innerText;
   const computerChoice = getComputerChoice();
@@ -100,9 +103,74 @@ function handleGame() {
 
   // Check if game to be stopped
   if (playerScore === 5 || computerScore === 5) {
-    console.log("yay, the game is over");
-    declareGameOutcome();
+    if (playerScore === 5) {
+      declareGameOutcome("player");
+    } else {
+      declareGameOutcome("computer");
+    }
+
     resetGame();
+  }
+}
+
+// Reset the game
+function resetGame() {
+  const resetBtn = document.querySelector(".play-again-btn");
+
+  resetBtn.addEventListener("click", () => {
+    location.reload();
+  });
+}
+
+// DeclareGameOutcome
+function declareGameOutcome(winnerName) {
+  const popUpEl = document.querySelector("div[data-outcome-element]");
+  displayGameOverEmoji(winnerName);
+  displayGameOverTxt(winnerName);
+
+  popUpEl.classList.add("show");
+}
+
+// show Game Over Emoji
+function displayGameOverEmoji(winnerName) {
+  const gameOverWinEmoji = ["🥳", "🎉", "🎈", "😍", "🤩"];
+  const gameOverLoseEmoji = ["😣", "😵‍💫", "💔", "🥺", "😭"];
+  const emojiEl = document.querySelector(".game-over-emoji");
+
+  let randomIndex = Math.floor(Math.random() * gameOverWinEmoji.length);
+
+  if (winnerName === "player") {
+    emojiEl.innerText = gameOverWinEmoji[randomIndex];
+  } else {
+    emojiEl.innerText = gameOverLoseEmoji[randomIndex];
+  }
+}
+
+// show Game Over Text
+function displayGameOverTxt(winnerName) {
+  const gameOverWinTxt = [
+    "Wuhoo!You Won The Game!",
+    "Abe Jiki Gola be Kela",
+    "Mojaaaaaaaaaaaaaaa bbe!",
+    "Abe luckot jiki goli, hattt!",
+    "Tumi e main!",
+  ];
+  const gameOverLoseTxt = [
+    "Hahaha! Ki mokkell be!!",
+    "Toi Gedaa, janisilu e!",
+    "Tur Kopal Futa, LOL",
+    "Jua etia hagi aha tumi",
+    "Tumi number one under 18 Geda",
+  ];
+
+  const txtEl = document.querySelector(".game-over-txt");
+
+  let randomIndex = Math.floor(Math.random() * gameOverWinTxt.length);
+
+  if (winnerName === "player") {
+    txtEl.innerText = gameOverWinTxt[randomIndex];
+  } else {
+    txtEl.innerText = gameOverLoseTxt[randomIndex];
   }
 }
 
