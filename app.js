@@ -178,17 +178,17 @@ function displayGameOverEmoji(winnerName) {
 // show Game Over Text
 function displayGameOverTxt(winnerName) {
   const gameOverWinTxt = [
-    "Wuhoo! You Won The Game!",
-    "You Won! That was cool.",
-    "Much deserved win!!",
-    "You did it, you won!",
+    "Huh! Luckot jikili be.",
+    "Thik ase, jikili de.",
+    "Much deserved win!! Eneke buli nokou",
+    "Bohut kosto noh? Clap Clap! Jikili",
     "Way to go! You Win!",
   ];
   const gameOverLoseTxt = [
-    "Ooops! You lost the Game.",
-    "You lost the game!",
-    "Better luck next time! You lost",
-    "Damn, you lost just by a little!",
+    "Hahaha! Goru hara dili be",
+    "Tur kam nai, hari goli",
+    "Janu e, you just can't can",
+    "LOL, ebar tu jiki dekha!!",
     "You almost won, better luck next time!",
   ];
 
